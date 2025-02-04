@@ -29,6 +29,7 @@ class Task_5 {
             System.out.println("3) Add a new Car to the Dealership");
             System.out.println("4) Add a new Purchase Request to an existing Car");
             System.out.println("5) Search for a Car by brand name");
+            System.out.println("6) Remove a Car from the Dealership");  // <-- Новый пункт
             System.out.println("0) Exit");
             System.out.print("Enter choice: ");
 
@@ -114,6 +115,17 @@ class Task_5 {
                     }
                     break;
 
+                case 6:
+                    System.out.print("Enter the brand of the car to remove: ");
+                    String brandToRemove = scanner.nextLine();
+                    boolean removed = dealership.removeCar(brandToRemove);
+                    if (removed) {
+                        System.out.println("Car with brand '" + brandToRemove + "' removed successfully.");
+                    } else {
+                        System.out.println("No car found with brand: " + brandToRemove);
+                    }
+                    break;
+
                 case 0:
                     System.out.println("Exiting program...");
                     break;
@@ -122,6 +134,7 @@ class Task_5 {
                     System.out.println("Invalid choice. Please try again.");
             }
         }
+
 
         scanner.close();
     }
