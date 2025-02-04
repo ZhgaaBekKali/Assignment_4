@@ -47,4 +47,9 @@ public class CarDealership {
         }
         return sb.toString();
     }
+    
+    public boolean removeCar(String brandToRemove) {
+        return cars.removeIf(car -> car.getBrandName().equalsIgnoreCase(brandToRemove));
+    }
 }
+
