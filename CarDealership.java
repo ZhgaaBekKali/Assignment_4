@@ -35,7 +35,7 @@ public class CarDealership {
                 return car;
             }
         }
-        return null; // not found
+        return null;
     }
 
     @Override
